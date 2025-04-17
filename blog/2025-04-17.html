@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于反派魔法少女的一些设定</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        #markdown-container { 
+            border: 1px solid #eee; 
+            padding: 20px; 
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        a { color: #0366d6; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <h1>关于反派魔法少女的一些设定</h1>
+    
+    <div id="markdown-container"></div>
+    
+    <script>
+        fetch('2025-04-17.md')
+            .then(response => {
+                if (!response.ok) throw new Error("Markdown 文件加载失败");
+                return response.text();
+            })
+            .then(markdown => {
+                document.getElementById('markdown-container').innerHTML = 
+                    marked.parse(markdown);
+            })
+            .catch(error => {
+                console.error(error);
+                document.getElementById('markdown-container').innerHTML = 
+                    '<p style="color:red">⚠️ 内容加载失败</p>';
+            });
+    </script>
+</body>
+</html>
