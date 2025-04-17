@@ -5,15 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>关于反派魔法少女的一些设定</title>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <style>
-        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
-        #markdown-container { 
-            border: 1px solid #eee; 
+  <style>
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            max-width: 800px; 
+            margin: 0 auto; 
             padding: 20px; 
-            margin: 20px 0;
-            border-radius: 5px;
+            line-height: 1.6;
+            color: #24292e;
         }
-        a { color: #0366d6; text-decoration: none; }
+        
+        /* Markdown 引用块样式 */
+        blockquote {
+            border-left: 4px solid #dfe2e5;
+            color: #6a737d;
+            padding: 0 1em;
+            margin: 0 0 16px 0;
+            background-color: #f6f8fa;
+            border-radius: 3px;
+        }
+        
+        /* 其他Markdown元素样式 */
+        pre {
+            background-color: #f6f8fa;
+            padding: 16px;
+            border-radius: 3px;
+            overflow: auto;
+        }
+        
+        code {
+            background-color: rgba(27,31,35,0.05);
+            padding: 0.2em 0.4em;
+            border-radius: 3px;
+            font-family: SFMono-Regular,Consolas,"Liberation Mono",Menlo,monospace;
+        }
+        
+        a { 
+            color: #0366d6; 
+            text-decoration: none; 
+        }
         a:hover { text-decoration: underline; }
     </style>
 </head>
